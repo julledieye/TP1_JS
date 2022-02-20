@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Exerxice 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container1">
+        <div class="container2">
+            <div class="header">
+                <textarea name="code" id="" rows="1">
+                </textarea>
+            </div>
+            <form id="form">
+                <div class="center">
+                    <div class="in">
+                        <label for="passe"> Longueur du mot de passe</label>
+                        <input type="text" value="15" id="passe" name="long" placeholder="15">
+                    </div class="in">
+                    <div class="in">
+                        <label for="lower">Contient des lettres en majuscules</label>
+                        <input type="checkbox" id="lower" class="choix" value="lower">
+                    </div>
+                    <div class="in">
+                        <label for="upper"> Contient des lettres en miniscules </label>
+                        <input type="checkbox" id="upper" class="choix" value="upper">
+                    </div>
+                    <div class="in">
+                        <label for="number">Contient des nombres</label>
+                        <input type="checkbox" id="number" class="choix" value="number">
+                    </div>
+                    <div class="in">
+                        <label for="special">Contient des caracteres speciaux</label>
+                        <input type="checkbox" id="special" class="choix" value="char">
+                    </div>
+                </div>
+                <div class="footer">
+                    <!-- <input type="button" id="ok" value="Generer Le Mot de Passe"> -->
+                    <button id="ok"> generer le mot de passe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
