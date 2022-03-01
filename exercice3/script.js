@@ -17,8 +17,17 @@ const c = document.createElement('button');
 c.innerText = 'copy';
 c.id = 'copy';
 
-
-function built() {
+function randomize(tab) {
+    var i, j, tmp;
+    for (i = tab.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        tmp = tab[i];
+        tab[i] = tab[j];
+        tab[j] = tmp;
+    }
+}
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
     const data = [].concat(
         upper.checked ? dataLowercase : [],
         lower.checked ? dataUppercase : [],
@@ -27,14 +36,17 @@ function built() {
     );
     let passwordLength = parseInt(long.value);
     let newPassword = '';
-
     if (data.length === 0) {
-        for (let i = 0; i < 15; i++) {
-            newPassword += data[Math.floor(Math.random() * data.length)];
-        }
+        newPassword = "donner un choix";
+        // for (let i = 0; i < 15; i++) {
+        //     newPassword += data[Math.floor(Math.random() * data.length)];
+        // }
     } else {
         for (let i = 0; i < passwordLength; i++) {
+            randomize(data);
             newPassword += data[Math.floor(Math.random() * data.length)];
+            // console.dir(data);
+            // i = passwordLength;
         }
     }
 
@@ -48,12 +60,5 @@ function built() {
 
     c.addEventListener('click', function() {
         header.removeChild(c)
-    }, true);
-
-}
-
-
-btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    built();
+    });
 });

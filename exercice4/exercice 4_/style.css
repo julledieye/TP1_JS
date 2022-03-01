@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    background-color: grey;
+    background-image: url(depositphotos_22104925-stock-photo-game-controller-and-blue-light.jpg);
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+label {
+    cursor: pointer;
+}
+
+button {
+    height: 4em;
+    width: 100%;
+    color: #000;
+
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+.corps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+    overflow: hidden;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: 1.3em;
+}
